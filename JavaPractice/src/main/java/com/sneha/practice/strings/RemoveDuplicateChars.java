@@ -15,9 +15,11 @@ public class RemoveDuplicateChars {
 	String input = "javaisawesome";
 	  
   List<Entry<String, Long>> list = Arrays.stream(input.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream().filter(s -> s.getValue() > 1).collect(Collectors.toList());
+  System.out.println(list);
 	
     for (Map.Entry<String, Long> entry : list) {
     	String s = entry.getKey();
+    	System.out.println(s);
     	if(input.contains(s)) {
     		input = input.replaceAll(s, "");
     	}

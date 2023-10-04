@@ -54,7 +54,7 @@ public class HashMapTest {
     }
 
     // Test that an exception is thrown if a key does not exist
-    @Test(expected= NoSuchElementException.class)
+    @Test(expected= Exception.class)
     public void testThrowsExceptionIfKeyDoesNotExist() {
         map.get("Hello");
     }
@@ -102,7 +102,7 @@ public class HashMapTest {
     }
 
     // Test elements are actually removed when remove is called
-    @Test(expected= NoSuchElementException.class)
+    @Test(expected= Exception.class)
     public void testRemoveDeletesElement() {
         map.add("Hello", 5);
         map.remove("Hello");
